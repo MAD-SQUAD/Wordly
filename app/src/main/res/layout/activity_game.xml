@@ -20,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="43dp"
             android:layout_weight="1"
-            app:srcCompat="?attr/homeAsUpIndicator" />
+            app:srcCompat="?attr/homeAsUpIndicator"
+            tools:ignore="NestedWeights" />
 
         <TextView
             android:id="@+id/text_wordly"
@@ -28,7 +29,7 @@
             android:layout_height="43dp"
             android:layout_weight="8"
             android:gravity="center"
-            android:text="WORDLY"
+            android:text="@string/wordly"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -56,222 +57,378 @@
 
         <LinearLayout style="@style/Linear2">
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_11"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_12"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_13"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_14"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_15"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-        </LinearLayout>
-
-        <LinearLayout style="@style/Linear2">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
         </LinearLayout>
 
         <LinearLayout style="@style/Linear2">
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_21"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_22"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_23"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_24"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_25"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-        </LinearLayout>
-
-        <LinearLayout style="@style/Linear2">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/bg_edit" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
         </LinearLayout>
 
         <LinearLayout style="@style/Linear2">
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_31"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_32"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_33"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_34"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_35"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
         </LinearLayout>
 
         <LinearLayout style="@style/Linear2">
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_41"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_42"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_43"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_44"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <TextView
+            <EditText
+                android:id="@+id/edit_45"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Linear2">
+
+            <EditText
+                android:id="@+id/edit_51"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+
+            <EditText
+                android:id="@+id/edit_52"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+
+            <EditText
+                android:id="@+id/edit_53"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+
+            <EditText
+                android:id="@+id/edit_54"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+
+            <EditText
+                android:id="@+id/edit_55"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Linear2">
+
+            <EditText
+                android:id="@+id/edit_61"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+
+            <EditText
+                android:id="@+id/edit_62"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+
+            <EditText
+                android:id="@+id/edit_63"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+
+            <EditText
+                android:id="@+id/edit_64"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit" />
+
+            <EditText
+                android:id="@+id/edit_65"
+                android:maxLength="1"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
         </LinearLayout>
@@ -286,150 +443,218 @@
 
         <LinearLayout style="@style/Linear">
 
-            <Button
+            <TextView
+                android:id="@+id/a1_bt"
                 style="@style/Button"
-                android:background="@drawable/bt_edit"
-                android:text="Й" />
-
-            <Button
-                style="@style/Button"
-                android:background="@drawable/bt_edit"
-                android:text="Ц" />
-
-            <Button
-                style="@style/Button"
+                android:text="Й"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a2_bt"
                 style="@style/Button"
+                android:text="Ц"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a3_bt"
                 style="@style/Button"
+                android:text="У"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a4_bt"
                 style="@style/Button"
+                android:text="К"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a5_bt"
                 style="@style/Button"
+                android:text="Е"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a6_bt"
                 style="@style/Button"
+                android:text="Н"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a7_bt"
                 style="@style/Button"
+                android:text="Г"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a8_bt"
                 style="@style/Button"
+                android:text="Ш"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a9_bt"
                 style="@style/Button"
-                android:background="@drawable/bt_edit" />
-        </LinearLayout>
-
-        <LinearLayout style="@style/Linear">
-
-            <Button
-                style="@style/Button"
+                android:text="Щ"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a10_bt"
                 style="@style/Button"
+                android:text="З"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/a11_bt"
                 style="@style/Button"
+                android:text="Х"
                 android:background="@drawable/bt_edit" />
-
-            <Button
+            <TextView
+                android:id="@+id/a12_bt"
                 style="@style/Button"
-                android:background="@drawable/bt_edit" />
-
-            <Button
-                style="@style/Button"
-                android:background="@drawable/bt_edit" />
-
-            <Button
-                style="@style/Button"
-                android:background="@drawable/bt_edit" />
-
-            <Button
-                style="@style/Button"
-                android:background="@drawable/bt_edit" />
-
-            <Button
-                style="@style/Button"
-                android:background="@drawable/bt_edit" />
-
-            <Button
-                style="@style/Button"
-                android:background="@drawable/bt_edit" />
-
-            <Button
-                style="@style/Button"
-                android:background="@drawable/bt_edit" />
-
-            <Button
-                style="@style/Button"
+                android:text="Ъ"
                 android:background="@drawable/bt_edit" />
         </LinearLayout>
 
         <LinearLayout style="@style/Linear">
 
-            <Button
+            <TextView
+                android:id="@+id/b1_bt"
+                style="@style/Button"
+                android:text="Ф"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b2_bt"
+                style="@style/Button"
+                android:text="Ы"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b3_bt"
+                style="@style/Button"
+                android:text="В"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b4_bt"
+                style="@style/Button"
+                android:text="А"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b5_bt"
+                style="@style/Button"
+                android:text="П"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b6_bt"
+                style="@style/Button"
+                android:text="Р"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b7_bt"
+                style="@style/Button"
+                android:text="О"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b8_bt"
+                style="@style/Button"
+                android:text="Л"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b9_bt"
+                style="@style/Button"
+                android:text="Д"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b10_bt"
+                style="@style/Button"
+                android:text="Ж"
+                android:background="@drawable/bt_edit" />
+
+            <TextView
+                android:id="@+id/b11_bt"
+                style="@style/Button"
+                android:text="Э"
+                android:background="@drawable/bt_edit" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Linear">
+
+            <TextView
+                android:id="@+id/d1_bt"
+                android:text="Я"
                 style="@style/Button"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/d2_bt"
+                android:text="Ч"
                 style="@style/Button"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/d3_bt"
+                android:text="С"
                 style="@style/Button"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/d4_bt"
+                android:text="М"
                 style="@style/Button"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/d5_bt"
+                android:text="И"
                 style="@style/Button"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/d6_bt"
+                android:text="Т"
                 style="@style/Button"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/d7_bt"
+                android:text="Ь"
                 style="@style/Button"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/d8_bt"
+                android:text="Б"
                 style="@style/Button"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <TextView
+                android:id="@+id/d9_bt"
+                android:text="Ю"
                 style="@style/Button"
                 android:background="@drawable/bt_edit" />
 
-            <Button
+            <ImageView
+                android:id="@+id/back_bt"
                 style="@style/Button"
                 android:layout_weight="2"
+                app:srcCompat="@android:drawable/ic_input_delete"
                 android:background="@drawable/bt_edit" />
         </LinearLayout>
 
-        <LinearLayout style="@style/Linear">
+        <LinearLayout style="@style/Linear"
+            tools:ignore="TooManyViews">
 
-            <Button
-                style="@style/Button"
+            <TextView
+                style="@style/ButtonCheck"
                 android:background="@drawable/bt_edit"
-                android:text="Проверить слово" />
+                android:text="@string/check_bt" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -8,8 +8,18 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:background">#3E3D3D</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#F1EAEA</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+    <style name="ButtonCheck">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
         <item name="android:background">#504E4E</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">26sp</item>
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">2dp</item>
