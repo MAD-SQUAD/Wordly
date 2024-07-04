@@ -5,6 +5,290 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#201E28"
     tools:context=".HelpActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotationX="2"
+        android:text="Как играть"
+        android:textColor="@color/white"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="617dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="буква О есть в слове и в правильной позиции"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            app:srcCompat="@android:drawable/arrow_down_float" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            style="@style/Linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_dark"
+                android:text="о"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="м"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="л"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="е"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="т"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="буква  А есть в слове и в неправильной позиции"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="95dp"
+            app:srcCompat="@android:drawable/arrow_down_float" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            style="@style/Linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="з"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:text="а"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="к"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="о"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="н"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="буквы Л нет в слове "
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="560dp" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            app:srcCompat="@android:drawable/arrow_down_float" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            style="@style/Linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="г"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="о"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="л"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="о"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral40"
+                android:text="с"
+                android:textAlignment="center"
+                android:textColor="#F4F1F1"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
