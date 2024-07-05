@@ -8,6 +8,7 @@ import android.graphics.Color
 import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageView
+import android.content.Context
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -93,6 +94,10 @@ class GameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val sharedPreferences = getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
+        val isDarkTheme = sharedPreferences.getBoolean("isDarkTheme", true)
+        setAppTheme(isDarkTheme)
+
         setContentView(R.layout.activity_game)
         edit11 = findViewById(R.id.edit_11)
         edit12 = findViewById(R.id.edit_12)
@@ -129,7 +134,7 @@ class GameActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val backButton: ImageView = findViewById(R.id.back_view)
+//        val backButton: ImageView = findViewById(R.id.back_view)
         val helpButton: ImageView = findViewById(R.id.help_view_game)
         val settingButton: ImageView = findViewById(R.id.setting_view_game)
 
@@ -138,10 +143,10 @@ class GameActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        backButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+//        backButton.setOnClickListener {
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//        }
 
         settingButton.setOnClickListener {
             val intent = Intent(this, SettingActivity::class.java)
@@ -450,6 +455,13 @@ class GameActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
 
+        }
+    }
+    private fun setAppTheme(isDark: Boolean) {
+        if (isDark) {
+            setTheme(R.style.AppTheme_Dark)
+        } else {
+            setTheme(R.style.AppTheme_Light)
         }
     }
 }

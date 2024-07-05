@@ -2,4 +2,6 @@
     <string name="app_name">Wordly</string>
     <string name="check_bt">Проверить слово</string>
     <string name="wordly">WORDLY</string>
+    <string name="empty"> </string>
+    <string name="settings">Настройки</string>
 </resources>
