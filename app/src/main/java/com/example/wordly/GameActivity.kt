@@ -386,19 +386,19 @@ class GameActivity : AppCompatActivity() {
         val w5 = word[4].toString()
 
         if (edit1Txt == w2 || edit1Txt == w3 || edit1Txt == w4 || edit1Txt == w5) {
-            edit1.setBackgroundColor(Color.parseColor("#ffff00"))
+            edit1.setBackgroundColor(Color.parseColor("#FF9800"))
         }
         if (edit2Txt == w1 || edit2Txt == w3 || edit2Txt == w4 || edit2Txt == w5) {
-            edit2.setBackgroundColor(Color.parseColor("#ffff00"))
+            edit2.setBackgroundColor(Color.parseColor("#FF9800"))
         }
         if (edit3Txt == w1 || edit3Txt == w2 || edit3Txt == w4 || edit3Txt == w5) {
-            edit3.setBackgroundColor(Color.parseColor("#ffff00"))
+            edit3.setBackgroundColor(Color.parseColor("#FF9800"))
         }
         if (edit4Txt == w1 || edit4Txt == w2 || edit4Txt == w3 || edit4Txt == w5) {
-            edit4.setBackgroundColor(Color.parseColor("#ffff00"))
+            edit4.setBackgroundColor(Color.parseColor("#FF9800"))
         }
         if (edit5Txt == w1 || edit5Txt == w2 || edit5Txt == w3 || edit5Txt == w4) {
-            edit5.setBackgroundColor(Color.parseColor("#ffff00"))
+            edit5.setBackgroundColor(Color.parseColor("#FF9800"))
         }
 
         if (edit1Txt == w1) {
@@ -418,23 +418,23 @@ class GameActivity : AppCompatActivity() {
         }
 
         if (edit1Txt != w1 && edit1Txt != w2 && edit1Txt != w3 && edit1Txt != w4 && edit1Txt != w5) {
-            edit1.setBackgroundColor(Color.parseColor("#ff3333"))
+            edit1.setBackgroundColor(Color.parseColor("#5C5F61"))
         }
 
         if (edit2Txt != w1 && edit2Txt != w2 && edit2Txt != w3 && edit2Txt != w4 && edit2Txt != w5) {
-            edit2.setBackgroundColor(Color.parseColor("#ff3333"))
+            edit2.setBackgroundColor(Color.parseColor("#5C5F61"))
         }
 
         if (edit3Txt != w1 && edit3Txt != w2 && edit3Txt != w3 && edit3Txt != w4 && edit3Txt != w5) {
-            edit3.setBackgroundColor(Color.parseColor("#ff3333"))
+            edit3.setBackgroundColor(Color.parseColor("#5C5F61"))
         }
 
         if (edit4Txt != w1 && edit4Txt != w2 && edit4Txt != w3 && edit4Txt != w4 && edit4Txt != w5) {
-            edit4.setBackgroundColor(Color.parseColor("#ff3333"))
+            edit4.setBackgroundColor(Color.parseColor("#5C5F61"))
         }
 
         if (edit5Txt != w1 && edit5Txt != w2 && edit5Txt != w3 && edit5Txt != w4 && edit5Txt != w5) {
-            edit5.setBackgroundColor(Color.parseColor("#ff3333"))
+            edit5.setBackgroundColor(Color.parseColor("#5C5F61"))
         }
 
         if (edit1Txt == w1 && edit2Txt == w2 && edit3Txt == w3 && edit4Txt == w4 && edit5Txt == w5) {
