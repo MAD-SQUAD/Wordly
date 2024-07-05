@@ -3,45 +3,48 @@ package com.example.wordly
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
+import android.graphics.Color
 import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class GameActivity : AppCompatActivity() {
-    private lateinit var  edit11: EditText
-    private lateinit var  edit12: EditText
-    private lateinit var  edit13: EditText
-    private lateinit var  edit14: EditText
-    private lateinit var  edit15: EditText
-    private lateinit var  edit21: EditText
-    private lateinit var  edit22: EditText
-    private lateinit var  edit23: EditText
-    private lateinit var  edit24: EditText
-    private lateinit var  edit25: EditText
-    private lateinit var  edit31: EditText
-    private lateinit var  edit32: EditText
-    private lateinit var  edit33: EditText
-    private lateinit var  edit34: EditText
-    private lateinit var  edit35: EditText
-    private lateinit var  edit41: EditText
-    private lateinit var  edit42: EditText
-    private lateinit var  edit43: EditText
-    private lateinit var  edit44: EditText
-    private lateinit var  edit45: EditText
-    private lateinit var  edit51: EditText
-    private lateinit var  edit52: EditText
-    private lateinit var  edit53: EditText
-    private lateinit var  edit54: EditText
-    private lateinit var  edit55: EditText
-    private lateinit var  edit61: EditText
-    private lateinit var  edit62: EditText
-    private lateinit var  edit63: EditText
-    private lateinit var  edit64: EditText
-    private lateinit var  edit65: EditText
+    private val WORD = "dubai"
+    private lateinit var edit11: EditText
+    private lateinit var edit12: EditText
+    private lateinit var edit13: EditText
+    private lateinit var edit14: EditText
+    private lateinit var edit15: EditText
+    private lateinit var edit21: EditText
+    private lateinit var edit22: EditText
+    private lateinit var edit23: EditText
+    private lateinit var edit24: EditText
+    private lateinit var edit25: EditText
+    private lateinit var edit31: EditText
+    private lateinit var edit32: EditText
+    private lateinit var edit33: EditText
+    private lateinit var edit34: EditText
+    private lateinit var edit35: EditText
+    private lateinit var edit41: EditText
+    private lateinit var edit42: EditText
+    private lateinit var edit43: EditText
+    private lateinit var edit44: EditText
+    private lateinit var edit45: EditText
+    private lateinit var edit51: EditText
+    private lateinit var edit52: EditText
+    private lateinit var edit53: EditText
+    private lateinit var edit54: EditText
+    private lateinit var edit55: EditText
+    private lateinit var edit61: EditText
+    private lateinit var edit62: EditText
+    private lateinit var edit63: EditText
+    private lateinit var edit64: EditText
+    private lateinit var edit65: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -101,6 +104,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         // логика полей ввода
+        keepPassingFocus()
 
         edit15.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -257,32 +261,38 @@ class GameActivity : AppCompatActivity() {
         passFocusToNextEdt(edit12, edit13)
         passFocusToNextEdt(edit13, edit14)
         passFocusToNextEdt(edit14, edit15)
+        passFocusToNextEdt(edit15, edit21)
 
         passFocusToNextEdt(edit21, edit22)
         passFocusToNextEdt(edit22, edit23)
         passFocusToNextEdt(edit23, edit24)
         passFocusToNextEdt(edit24, edit25)
+        passFocusToNextEdt(edit25, edit31)
 
         passFocusToNextEdt(edit31, edit32)
         passFocusToNextEdt(edit32, edit33)
         passFocusToNextEdt(edit33, edit34)
         passFocusToNextEdt(edit34, edit35)
+        passFocusToNextEdt(edit35, edit41)
 
         passFocusToNextEdt(edit41, edit42)
         passFocusToNextEdt(edit42, edit43)
         passFocusToNextEdt(edit43, edit44)
         passFocusToNextEdt(edit44, edit45)
+        passFocusToNextEdt(edit45, edit51)
 
         passFocusToNextEdt(edit51, edit52)
         passFocusToNextEdt(edit52, edit53)
         passFocusToNextEdt(edit53, edit54)
         passFocusToNextEdt(edit54, edit55)
+        passFocusToNextEdt(edit55, edit61)
 
         passFocusToNextEdt(edit61, edit62)
         passFocusToNextEdt(edit62, edit63)
         passFocusToNextEdt(edit63, edit64)
         passFocusToNextEdt(edit64, edit65)
     }
+
     private fun passFocusToNextEdt(edit1: EditText, edit2: EditText) {
 
         edit1.addTextChangedListener(object : TextWatcher {
@@ -301,6 +311,96 @@ class GameActivity : AppCompatActivity() {
         })
     }
 
-    private fun validateRow(edit1: EditText, edit2: EditText, edit3: EditText, edit4: EditText, edit5: EditText) {
+    private fun validateRow(
+        edit1: EditText,
+        edit2: EditText,
+        edit3: EditText,
+        edit4: EditText,
+        edit5: EditText
+    ) {
+
+        val edit1Txt = edit1.text.toString()
+        val edit2Txt = edit2.text.toString()
+        val edit3Txt = edit3.text.toString()
+        val edit4Txt = edit4.text.toString()
+        val edit5Txt = edit5.text.toString()
+
+        val w1 = WORD[0].toString()
+        val w2 = WORD[1].toString()
+        val w3 = WORD[2].toString()
+        val w4 = WORD[3].toString()
+        val w5 = WORD[4].toString()
+
+        if (edit1Txt == w2 || edit1Txt == w3 || edit1Txt == w4 || edit1Txt == w5) {
+            edit1.setBackgroundColor(Color.parseColor("#ffff00"))
+        }
+        if (edit2Txt == w1 || edit2Txt == w3 || edit2Txt == w4 || edit2Txt == w5) {
+            edit2.setBackgroundColor(Color.parseColor("#ffff00"))
+        }
+        if (edit3Txt == w1 || edit3Txt == w2 || edit3Txt == w4 || edit3Txt == w5) {
+            edit3.setBackgroundColor(Color.parseColor("#ffff00"))
+        }
+        if (edit4Txt == w1 || edit4Txt == w2 || edit4Txt == w3 || edit4Txt == w5) {
+            edit4.setBackgroundColor(Color.parseColor("#ffff00"))
+        }
+        if (edit5Txt == w1 || edit5Txt == w2 || edit5Txt == w3 || edit5Txt == w4) {
+            edit5.setBackgroundColor(Color.parseColor("#ffff00"))
+        }
+
+        if (edit1Txt == w1) {
+            edit1.setBackgroundColor(Color.parseColor("#33cc33"))
+        }
+        if (edit2Txt == w2) {
+            edit2.setBackgroundColor(Color.parseColor("#33cc33"))
+        }
+        if (edit3Txt == w3) {
+            edit3.setBackgroundColor(Color.parseColor("#33cc33"))
+        }
+        if (edit4Txt == w4) {
+            edit4.setBackgroundColor(Color.parseColor("#33cc33"))
+        }
+        if (edit5Txt == w5) {
+            edit5.setBackgroundColor(Color.parseColor("#33cc33"))
+        }
+
+        if (edit1Txt != w1 && edit1Txt != w2 && edit1Txt != w3 && edit1Txt != w4 && edit1Txt != w5) {
+            edit1.setBackgroundColor(Color.parseColor("#ff3333"))
+        }
+
+        if (edit2Txt != w1 && edit2Txt != w2 && edit2Txt != w3 && edit2Txt != w4 && edit2Txt != w5) {
+            edit2.setBackgroundColor(Color.parseColor("#ff3333"))
+        }
+
+        if (edit3Txt != w1 && edit3Txt != w2 && edit3Txt != w3 && edit3Txt != w4 && edit3Txt != w5) {
+            edit3.setBackgroundColor(Color.parseColor("#ff3333"))
+        }
+
+        if (edit4Txt != w1 && edit4Txt != w2 && edit4Txt != w3 && edit4Txt != w4 && edit4Txt != w5) {
+            edit4.setBackgroundColor(Color.parseColor("#ff3333"))
+        }
+
+        if (edit5Txt != w1 && edit5Txt != w2 && edit5Txt != w3 && edit5Txt != w4 && edit5Txt != w5) {
+            edit5.setBackgroundColor(Color.parseColor("#ff3333"))
+        }
+
+        if (edit1Txt == w1 && edit2Txt == w2 && edit3Txt == w3 && edit4Txt == w4 && edit5Txt == w5) {
+            makeGameInactive()
+            Toast.makeText(
+                applicationContext,
+                "Congratulations, you have guessed the right word.",
+                Toast.LENGTH_SHORT
+            ).show()
+            return
+        }
+
+        if (edit5.id == R.id.edit_65) {
+            makeGameInactive()
+            Toast.makeText(
+                applicationContext,
+                "Sorry you couldn't guess the word.",
+                Toast.LENGTH_SHORT
+            ).show()
+
+        }
     }
 }
