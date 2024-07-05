@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         val playGame: Button = findViewById(R.id.play_button)
         val helpButton: ImageView = findViewById(R.id.help_view)
         val settingButton: ImageView = findViewById(R.id.setting_view)
-        val historyButton: ImageView = findViewById(R.id.histoy_view)
 
         helpButton.setOnClickListener{
             val intent = Intent(this, HelpActivity::class.java)
@@ -37,11 +36,6 @@ class MainActivity : AppCompatActivity() {
 
         settingButton.setOnClickListener{
             val intent = Intent(this, SettingActivity::class.java)
-            startActivity(intent)
-        }
-
-        historyButton.setOnClickListener{
-            val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
     }

@@ -652,6 +652,7 @@
             tools:ignore="TooManyViews">
 
             <TextView
+                android:id="@+id/check_bt"
                 style="@style/ButtonCheck"
                 android:background="@drawable/bt_edit"
                 android:text="@string/check_bt" />

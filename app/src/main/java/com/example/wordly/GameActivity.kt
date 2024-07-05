@@ -1,5 +1,6 @@
 package com.example.wordly
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -7,14 +8,20 @@ import android.graphics.Color
 import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.io.BufferedReader
+import java.io.InputStreamReader
 
 class GameActivity : AppCompatActivity() {
-    private val WORD = "dubai"
+
+    private lateinit var wordList : List<String>
+    lateinit var word : String
+
     private lateinit var edit11: EditText
     private lateinit var edit12: EditText
     private lateinit var edit13: EditText
@@ -45,6 +52,44 @@ class GameActivity : AppCompatActivity() {
     private lateinit var edit63: EditText
     private lateinit var edit64: EditText
     private lateinit var edit65: EditText
+
+    private lateinit var a1_bt: TextView
+    private lateinit var a2_bt: TextView
+    private lateinit var a3_bt: TextView
+    private lateinit var a4_bt: TextView
+    private lateinit var a5_bt: TextView
+    private lateinit var a6_bt: TextView
+    private lateinit var a7_bt: TextView
+    private lateinit var a8_bt: TextView
+    private lateinit var a9_bt: TextView
+    private lateinit var a10_bt: TextView
+    private lateinit var a11_bt: TextView
+    private lateinit var a12_bt: TextView
+
+    private lateinit var b1_bt: TextView
+    private lateinit var b2_bt: TextView
+    private lateinit var b3_bt: TextView
+    private lateinit var b4_bt: TextView
+    private lateinit var b5_bt: TextView
+    private lateinit var b6_bt: TextView
+    private lateinit var b7_bt: TextView
+    private lateinit var b8_bt: TextView
+    private lateinit var b9_bt: TextView
+    private lateinit var b10_bt: TextView
+    private lateinit var b11_bt: TextView
+
+    private lateinit var d1_bt: TextView
+    private lateinit var d2_bt: TextView
+    private lateinit var d3_bt: TextView
+    private lateinit var d4_bt: TextView
+    private lateinit var d5_bt: TextView
+    private lateinit var d6_bt: TextView
+    private lateinit var d7_bt: TextView
+    private lateinit var d8_bt: TextView
+    private lateinit var d9_bt: TextView
+
+    private lateinit var back_bt: TextView
+    private lateinit var check_bt: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -311,6 +356,7 @@ class GameActivity : AppCompatActivity() {
         })
     }
 
+    @SuppressLint("DiscouragedApi")
     private fun validateRow(
         edit1: EditText,
         edit2: EditText,
@@ -325,11 +371,14 @@ class GameActivity : AppCompatActivity() {
         val edit4Txt = edit4.text.toString()
         val edit5Txt = edit5.text.toString()
 
-        val w1 = WORD[0].toString()
-        val w2 = WORD[1].toString()
-        val w3 = WORD[2].toString()
-        val w4 = WORD[3].toString()
-        val w5 = WORD[4].toString()
+        wordList = BufferedReader(InputStreamReader(resources.openRawResource(resources.getIdentifier("words", "raw", packageName)))).readLines()
+        word = wordList.random()
+
+        val w1 = word[0].toString()
+        val w2 = word[1].toString()
+        val w3 = word[2].toString()
+        val w4 = word[3].toString()
+        val w5 = word[4].toString()
 
         if (edit1Txt == w2 || edit1Txt == w3 || edit1Txt == w4 || edit1Txt == w5) {
             edit1.setBackgroundColor(Color.parseColor("#ffff00"))
