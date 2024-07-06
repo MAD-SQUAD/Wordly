@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.text.Editable
 import android.graphics.Color
 import android.text.TextWatcher
-import android.widget.EditText
 import android.widget.ImageView
 import android.content.Context
 import android.widget.TextView
@@ -20,39 +19,39 @@ import java.io.InputStreamReader
 
 class GameActivity : AppCompatActivity() {
 
-    private lateinit var wordList : List<String>
-    lateinit var word : String
+    private lateinit var wordList: List<String>
+    lateinit var word: String
 
-    private lateinit var edit11: EditText
-    private lateinit var edit12: EditText
-    private lateinit var edit13: EditText
-    private lateinit var edit14: EditText
-    private lateinit var edit15: EditText
-    private lateinit var edit21: EditText
-    private lateinit var edit22: EditText
-    private lateinit var edit23: EditText
-    private lateinit var edit24: EditText
-    private lateinit var edit25: EditText
-    private lateinit var edit31: EditText
-    private lateinit var edit32: EditText
-    private lateinit var edit33: EditText
-    private lateinit var edit34: EditText
-    private lateinit var edit35: EditText
-    private lateinit var edit41: EditText
-    private lateinit var edit42: EditText
-    private lateinit var edit43: EditText
-    private lateinit var edit44: EditText
-    private lateinit var edit45: EditText
-    private lateinit var edit51: EditText
-    private lateinit var edit52: EditText
-    private lateinit var edit53: EditText
-    private lateinit var edit54: EditText
-    private lateinit var edit55: EditText
-    private lateinit var edit61: EditText
-    private lateinit var edit62: EditText
-    private lateinit var edit63: EditText
-    private lateinit var edit64: EditText
-    private lateinit var edit65: EditText
+    private lateinit var edit11: TextView
+    private lateinit var edit12: TextView
+    private lateinit var edit13: TextView
+    private lateinit var edit14: TextView
+    private lateinit var edit15: TextView
+    private lateinit var edit21: TextView
+    private lateinit var edit22: TextView
+    private lateinit var edit23: TextView
+    private lateinit var edit24: TextView
+    private lateinit var edit25: TextView
+    private lateinit var edit31: TextView
+    private lateinit var edit32: TextView
+    private lateinit var edit33: TextView
+    private lateinit var edit34: TextView
+    private lateinit var edit35: TextView
+    private lateinit var edit41: TextView
+    private lateinit var edit42: TextView
+    private lateinit var edit43: TextView
+    private lateinit var edit44: TextView
+    private lateinit var edit45: TextView
+    private lateinit var edit51: TextView
+    private lateinit var edit52: TextView
+    private lateinit var edit53: TextView
+    private lateinit var edit54: TextView
+    private lateinit var edit55: TextView
+    private lateinit var edit61: TextView
+    private lateinit var edit62: TextView
+    private lateinit var edit63: TextView
+    private lateinit var edit64: TextView
+    private lateinit var edit65: TextView
 
     private lateinit var a1_bt: TextView
     private lateinit var a2_bt: TextView
@@ -89,9 +88,22 @@ class GameActivity : AppCompatActivity() {
     private lateinit var d8_bt: TextView
     private lateinit var d9_bt: TextView
 
-    private lateinit var back_bt: TextView
-    private lateinit var check_bt: TextView
+    private lateinit var back_bt: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        wordList = BufferedReader(
+            InputStreamReader(
+                resources.openRawResource(
+                    resources.getIdentifier(
+                        "words",
+                        "raw",
+                        packageName
+                    )
+                )
+            )
+        ).readLines()
+        word = wordList.random().uppercase()
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         val sharedPreferences = getSharedPreferences("AppSettings", Context.MODE_PRIVATE)
@@ -134,28 +146,318 @@ class GameActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-//        val backButton: ImageView = findViewById(R.id.back_view)
         val helpButton: ImageView = findViewById(R.id.help_view_game)
-        val settingButton: ImageView = findViewById(R.id.setting_view_game)
 
         helpButton.setOnClickListener {
             val intent = Intent(this, HelpActivity::class.java)
             startActivity(intent)
         }
 
-//        backButton.setOnClickListener {
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
-//        }
-
-        settingButton.setOnClickListener {
-            val intent = Intent(this, SettingActivity::class.java)
-            startActivity(intent)
-        }
-
-        // логика полей ввода
         keepPassingFocus()
 
+        fun setTextFields(str: String) {
+            if (edit11.text.any { it.isLetter() }) {
+                if (edit12.text.any{it.isLetter()}){
+                    if (edit13.text.any{it.isLetter()}){
+                        if (edit14.text.any{it.isLetter()}){
+                            if(edit15.text.any{it.isLetter()}){
+                                if(edit21.text.any{it.isLetter()}){
+                                    if(edit22.text.any{it.isLetter()}){
+                                        if(edit23.text.any{it.isLetter()}){
+                                            if(edit24.text.any{it.isLetter()}){
+                                                if(edit25.text.any{it.isLetter()}){
+                                                    if(edit31.text.any{it.isLetter()}){
+                                                        if(edit32.text.any{it.isLetter()}){
+                                                            if(edit33.text.any{it.isLetter()}){
+                                                                if(edit34.text.any{it.isLetter()}){
+                                                                    if(edit35.text.any{it.isLetter()}){
+                                                                        if(edit41.text.any{it.isLetter()}){
+                                                                            if(edit42.text.any{it.isLetter()}){
+                                                                                if(edit43.text.any{it.isLetter()}){
+                                                                                    if(edit44.text.any{it.isLetter()}){
+                                                                                        if(edit45.text.any{it.isLetter()}){
+                                                                                            if(edit51.text.any{it.isLetter()}){
+                                                                                                if(edit52.text.any{it.isLetter()}){
+                                                                                                    if(edit53.text.any{it.isLetter()}){
+                                                                                                        if(edit54.text.any{it.isLetter()}){
+                                                                                                            if(edit55.text.any{it.isLetter()}){
+                                                                                                                if(edit61.text.any{it.isLetter()}){
+                                                                                                                    if(edit62.text.any{it.isLetter()}){
+                                                                                                                        if(edit63.text.any{it.isLetter()}){
+                                                                                                                            if(edit64.text.any{it.isLetter()}){
+                                                                                                                                if(edit65.text.any{it.isLetter()}){
+                                                                                                                                }else{edit65.append(str)}
+                                                                                                                            }else{edit64.append(str)}
+                                                                                                                        }else{edit63.append(str)}
+                                                                                                                    }else{edit62.append(str)}
+                                                                                                                }else{edit61.append(str)}
+                                                                                                            }else{edit55.append(str)}
+                                                                                                        }else{edit54.append(str)}
+                                                                                                    }else{edit53.append(str)}
+                                                                                                }else{edit52.append(str)}
+                                                                                            }else{edit51.append(str)}
+                                                                                        }else{edit45.append(str)}
+                                                                                    }else{edit44.append(str)}
+                                                                                }else{edit43.append(str)}
+                                                                            }else{edit42.append(str)}
+                                                                        }else{edit41.append(str)}
+                                                                    }else{edit35.append(str)}
+                                                                }else{edit34.append(str)}
+                                                            }else{edit33.append(str)}
+                                                        }else{edit32.append(str)}
+                                                    }else{edit31.append(str)}
+                                                }else{edit25.append(str)}
+                                            }else{edit24.append(str)}
+                                        }else{edit23.append(str)}
+                                    }else{edit22.append(str)}
+                                }else{edit21.append(str)}
+                            }else{edit15.append(str)}
+                        }else{edit14.append(str)}
+                    }else{edit13.append(str)}
+                }else{edit12.append(str)}
+            }else{edit11.append(str)}
+        }
+        fun delTextFields(){
+            if(edit64.text.any { it.isLetter() }){
+                edit64.text = ""
+            }else{
+                if (edit63.text.any { it.isLetter() }){
+                    edit63.text = ""
+                }else{
+                    if(edit62.text.any { it.isLetter() }){
+                        edit62.text = ""
+                    }else{
+                        if(edit61.text.any { it.isLetter() }){
+                            edit61.text = ""
+                            return
+                        }
+                    }
+                }
+            }
+            if (edit55.text == ""){
+                if(edit54.text.any { it.isLetter() }){
+                    edit54.text = ""
+                }else{
+                    if (edit53.text.any { it.isLetter() }){
+                        edit53.text = ""
+                    }else{
+                        if(edit52.text.any { it.isLetter() }){
+                            edit52.text = ""
+                        }else{
+                            if(edit51.text.any { it.isLetter() }){
+                                edit51.text = ""
+                                return
+                            }
+                        }
+                    }
+                }
+            }
+            if (edit45.text == ""){
+                if(edit44.text.any { it.isLetter() }){
+                    edit44.text = ""
+                }else{
+                    if (edit43.text.any { it.isLetter() }){
+                        edit43.text = ""
+                    }else{
+                        if(edit42.text.any { it.isLetter() }){
+                            edit42.text = ""
+                        }else{
+                            if(edit41.text.any { it.isLetter() }){
+                                edit41.text = ""
+                                return
+                            }
+                        }
+                    }
+                }
+            }
+            if (edit35.text == ""){
+                if(edit34.text.any { it.isLetter() }){
+                    edit34.text = ""
+                }else{
+                    if (edit33.text.any { it.isLetter() }){
+                        edit33.text = ""
+                    }else{
+                        if(edit32.text.any { it.isLetter() }){
+                            edit32.text = ""
+                        }else{
+                            if(edit31.text.any { it.isLetter() }){
+                                edit31.text = ""
+                                return
+                            }
+                        }
+                    }
+                }
+            }
+            if (edit25.text == ""){
+                if(edit24.text.any { it.isLetter() }){
+                    edit24.text = ""
+                }else{
+                    if (edit23.text.any { it.isLetter() }){
+                        edit23.text = ""
+                    }else{
+                        if(edit22.text.any { it.isLetter() }){
+                            edit22.text = ""
+                        }else{
+                            if(edit21.text.any { it.isLetter() }){
+                                edit21.text = ""
+                                return
+                            }
+                        }
+                    }
+                }
+            }
+            if (edit15.text == ""){
+                if(edit14.text.any { it.isLetter() }){
+                    edit14.text = ""
+                }else{
+                    if (edit13.text.any { it.isLetter() }){
+                        edit13.text = ""
+                    }else{
+                        if(edit12.text.any { it.isLetter() }){
+                            edit12.text = ""
+                        }else{
+                            if(edit11.text.any { it.isLetter() }){
+                                edit11.text = ""
+                                return
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        a1_bt = findViewById(R.id.a1_bt)
+        a1_bt.setOnClickListener {
+            setTextFields("Й")
+        }
+        a2_bt = findViewById(R.id.a2_bt)
+        a2_bt.setOnClickListener {
+            setTextFields("Ц")
+        }
+        a3_bt = findViewById(R.id.a3_bt)
+        a3_bt.setOnClickListener {
+            setTextFields("У")
+        }
+        a4_bt = findViewById(R.id.a4_bt)
+        a4_bt.setOnClickListener {
+            setTextFields("К")
+        }
+        a5_bt = findViewById(R.id.a5_bt)
+        a5_bt.setOnClickListener {
+            setTextFields("Е")
+        }
+        a6_bt = findViewById(R.id.a6_bt)
+        a6_bt.setOnClickListener {
+            setTextFields("Н")
+        }
+        a7_bt = findViewById(R.id.a7_bt)
+        a7_bt.setOnClickListener {
+            setTextFields("Г")
+        }
+        a8_bt = findViewById(R.id.a8_bt)
+        a8_bt.setOnClickListener {
+            setTextFields("Ш")
+        }
+        a9_bt = findViewById(R.id.a9_bt)
+        a9_bt.setOnClickListener {
+            setTextFields("Щ")
+        }
+        a10_bt = findViewById(R.id.a10_bt)
+        a10_bt.setOnClickListener {
+            setTextFields("З")
+        }
+        a11_bt = findViewById(R.id.a11_bt)
+        a11_bt.setOnClickListener {
+            setTextFields("Х")
+        }
+        a12_bt = findViewById(R.id.a12_bt)
+        a12_bt.setOnClickListener {
+            setTextFields("Ъ")
+        }
+        b1_bt = findViewById(R.id.b1_bt)
+        b1_bt.setOnClickListener {
+            setTextFields("Ф")
+        }
+        b2_bt = findViewById(R.id.b2_bt)
+        b2_bt.setOnClickListener {
+            setTextFields("Ы")
+        }
+        b3_bt = findViewById(R.id.b3_bt)
+        b3_bt.setOnClickListener {
+            setTextFields("В")
+        }
+        b4_bt = findViewById(R.id.b4_bt)
+        b4_bt.setOnClickListener {
+            setTextFields("А")
+        }
+        b5_bt = findViewById(R.id.b5_bt)
+        b5_bt.setOnClickListener {
+            setTextFields("П")
+        }
+        b6_bt = findViewById(R.id.b6_bt)
+        b6_bt.setOnClickListener {
+            setTextFields("Р")
+        }
+        b7_bt = findViewById(R.id.b7_bt)
+        b7_bt.setOnClickListener {
+            setTextFields("О")
+        }
+        b8_bt = findViewById(R.id.b8_bt)
+        b8_bt.setOnClickListener {
+            setTextFields("Л")
+        }
+        b9_bt = findViewById(R.id.b9_bt)
+        b9_bt.setOnClickListener {
+            setTextFields("Д")
+        }
+        b10_bt = findViewById(R.id.b10_bt)
+        b10_bt.setOnClickListener {
+            setTextFields("Ж")
+        }
+        b11_bt = findViewById(R.id.b11_bt)
+        b11_bt.setOnClickListener {
+            setTextFields("Э")
+        }
+        d1_bt = findViewById(R.id.d1_bt)
+        d1_bt.setOnClickListener {
+            setTextFields("Я")
+        }
+        d2_bt = findViewById(R.id.d2_bt)
+        d2_bt.setOnClickListener {
+            setTextFields("Ч")
+        }
+        d3_bt = findViewById(R.id.d3_bt)
+        d3_bt.setOnClickListener {
+            setTextFields("С")
+        }
+        d4_bt = findViewById(R.id.d4_bt)
+        d4_bt.setOnClickListener {
+            setTextFields("М")
+        }
+        d5_bt = findViewById(R.id.d5_bt)
+        d5_bt.setOnClickListener {
+            setTextFields("И")
+        }
+        d6_bt = findViewById(R.id.d6_bt)
+        d6_bt.setOnClickListener {
+            setTextFields("Т")
+        }
+        d7_bt = findViewById(R.id.d7_bt)
+        d7_bt.setOnClickListener {
+            setTextFields("Ь")
+        }
+        d8_bt = findViewById(R.id.d8_bt)
+        d8_bt.setOnClickListener {
+            setTextFields("Б")
+        }
+        d9_bt = findViewById(R.id.d9_bt)
+        d9_bt.setOnClickListener {
+            setTextFields("Ю")
+        }
+        back_bt = findViewById(R.id.back_bt)
+        back_bt.setOnClickListener {
+            delTextFields()
+        }
+        // логика полей ввода
         edit15.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
@@ -194,7 +496,6 @@ class GameActivity : AppCompatActivity() {
                 }
             }
         })
-
         edit35.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
@@ -341,9 +642,10 @@ class GameActivity : AppCompatActivity() {
         passFocusToNextEdt(edit62, edit63)
         passFocusToNextEdt(edit63, edit64)
         passFocusToNextEdt(edit64, edit65)
+
     }
 
-    private fun passFocusToNextEdt(edit1: EditText, edit2: EditText) {
+    private fun passFocusToNextEdt(edit1: TextView, edit2: TextView) {
 
         edit1.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -363,11 +665,11 @@ class GameActivity : AppCompatActivity() {
 
     @SuppressLint("DiscouragedApi")
     private fun validateRow(
-        edit1: EditText,
-        edit2: EditText,
-        edit3: EditText,
-        edit4: EditText,
-        edit5: EditText
+        edit1: TextView,
+        edit2: TextView,
+        edit3: TextView,
+        edit4: TextView,
+        edit5: TextView
     ) {
 
         val edit1Txt = edit1.text.toString()
@@ -376,8 +678,6 @@ class GameActivity : AppCompatActivity() {
         val edit4Txt = edit4.text.toString()
         val edit5Txt = edit5.text.toString()
 
-        wordList = BufferedReader(InputStreamReader(resources.openRawResource(resources.getIdentifier("words", "raw", packageName)))).readLines()
-        word = wordList.random()
 
         val w1 = word[0].toString()
         val w2 = word[1].toString()
@@ -439,24 +739,21 @@ class GameActivity : AppCompatActivity() {
 
         if (edit1Txt == w1 && edit2Txt == w2 && edit3Txt == w3 && edit4Txt == w4 && edit5Txt == w5) {
             makeGameInactive()
-            Toast.makeText(
-                applicationContext,
-                "Congratulations, you have guessed the right word.",
-                Toast.LENGTH_SHORT
-            ).show()
+            val intent = Intent(this, WinActivity::class.java)
+            intent.putExtra("win", word)
+            startActivity(intent)
             return
         }
 
         if (edit5.id == R.id.edit_65) {
             makeGameInactive()
-            Toast.makeText(
-                applicationContext,
-                "Sorry you couldn't guess the word.",
-                Toast.LENGTH_SHORT
-            ).show()
-
+            val intent = Intent(this, LoseActivity::class.java)
+            intent.putExtra("lose", word)
+            startActivity(intent)
+            return
         }
     }
+
     private fun setAppTheme(isDark: Boolean) {
         if (isDark) {
             setTheme(R.style.AppTheme_Dark)

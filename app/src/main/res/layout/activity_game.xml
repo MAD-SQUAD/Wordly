@@ -42,12 +42,6 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/setting_view_game"
-            android:layout_width="wrap_content"
-            android:layout_height="43dp"
-            android:layout_weight="1"
-            app:srcCompat="@android:drawable/ic_menu_manage" />
     </LinearLayout>
 
     <LinearLayout
@@ -58,7 +52,7 @@
 
         <LinearLayout style="@style/Linear2">
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_11"
                 android:maxLength="1"
                 android:gravity="center"
@@ -70,7 +64,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_12"
                 android:maxLength="1"
                 android:gravity="center"
@@ -82,7 +76,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_13"
                 android:maxLength="1"
                 android:gravity="center"
@@ -94,7 +88,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_14"
                 android:maxLength="1"
                 android:gravity="center"
@@ -106,7 +100,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_15"
                 android:maxLength="1"
                 android:gravity="center"
@@ -121,7 +115,7 @@
 
         <LinearLayout style="@style/Linear2">
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_21"
                 android:maxLength="1"
                 android:gravity="center"
@@ -133,7 +127,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_22"
                 android:maxLength="1"
                 android:gravity="center"
@@ -145,7 +139,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_23"
                 android:maxLength="1"
                 android:gravity="center"
@@ -157,7 +151,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_24"
                 android:maxLength="1"
                 android:gravity="center"
@@ -169,7 +163,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_25"
                 android:maxLength="1"
                 android:gravity="center"
@@ -184,7 +178,7 @@
 
         <LinearLayout style="@style/Linear2">
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_31"
                 android:maxLength="1"
                 android:gravity="center"
@@ -196,7 +190,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_32"
                 android:maxLength="1"
                 android:gravity="center"
@@ -208,7 +202,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_33"
                 android:maxLength="1"
                 android:gravity="center"
@@ -220,7 +214,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_34"
                 android:maxLength="1"
                 android:gravity="center"
@@ -232,7 +226,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_35"
                 android:maxLength="1"
                 android:gravity="center"
@@ -247,7 +241,7 @@
 
         <LinearLayout style="@style/Linear2">
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_41"
                 android:maxLength="1"
                 android:gravity="center"
@@ -259,7 +253,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_42"
                 android:maxLength="1"
                 android:gravity="center"
@@ -271,7 +265,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_43"
                 android:maxLength="1"
                 android:gravity="center"
@@ -283,7 +277,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_44"
                 android:maxLength="1"
                 android:gravity="center"
@@ -295,7 +289,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_45"
                 android:maxLength="1"
                 android:gravity="center"
@@ -310,7 +304,7 @@
 
         <LinearLayout style="@style/Linear2">
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_51"
                 android:maxLength="1"
                 android:gravity="center"
@@ -322,7 +316,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit"/>
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_52"
                 android:maxLength="1"
                 android:gravity="center"
@@ -334,7 +328,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_53"
                 android:maxLength="1"
                 android:gravity="center"
@@ -346,7 +340,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_54"
                 android:maxLength="1"
                 android:gravity="center"
@@ -358,7 +352,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_55"
                 android:maxLength="1"
                 android:gravity="center"
@@ -373,7 +367,7 @@
 
         <LinearLayout style="@style/Linear2">
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_61"
                 android:maxLength="1"
                 android:gravity="center"
@@ -385,7 +379,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_62"
                 android:maxLength="1"
                 android:gravity="center"
@@ -397,7 +391,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_63"
                 android:maxLength="1"
                 android:gravity="center"
@@ -409,7 +403,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_64"
                 android:maxLength="1"
                 android:gravity="center"
@@ -421,7 +415,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_edit" />
 
-            <EditText
+            <TextView
                 android:id="@+id/edit_65"
                 android:maxLength="1"
                 android:gravity="center"
@@ -648,14 +642,13 @@
                 app:srcCompat="@android:drawable/ic_input_delete"
                 android:background="@drawable/bt_edit" />
         </LinearLayout>
+<!--        <LinearLayout style="@style/Linear"-->
+<!--            tools:ignore="TooManyViews">-->
 
-        <LinearLayout style="@style/Linear"
-            tools:ignore="TooManyViews">
-
-            <TextView
-                style="@style/ButtonCheck"
-                android:background="@drawable/bt_edit"
-                android:text="@string/check_bt" />
-        </LinearLayout>
+<!--            <TextView-->
+<!--                style="@style/ButtonCheck"-->
+<!--                android:background="@drawable/bt_edit"-->
+<!--                android:text="@string/check_bt" />-->
+<!--        </LinearLayout>-->
     </LinearLayout>
 </LinearLayout>
