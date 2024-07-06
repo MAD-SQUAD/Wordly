@@ -642,13 +642,14 @@
                 app:srcCompat="@android:drawable/ic_input_delete"
                 android:background="@drawable/bt_edit" />
         </LinearLayout>
-<!--        <LinearLayout style="@style/Linear"-->
-<!--            tools:ignore="TooManyViews">-->
+        <LinearLayout style="@style/Linear"
+            tools:ignore="TooManyViews">
 
-<!--            <TextView-->
-<!--                style="@style/ButtonCheck"-->
-<!--                android:background="@drawable/bt_edit"-->
-<!--                android:text="@string/check_bt" />-->
-<!--        </LinearLayout>-->
+            <TextView
+                android:id="@+id/check_bt"
+                style="@style/ButtonCheck"
+                android:background="@drawable/bt_edit"
+                android:text="@string/check_bt" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

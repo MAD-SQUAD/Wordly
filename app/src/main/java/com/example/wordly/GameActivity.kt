@@ -16,6 +16,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.io.File
+import kotlin.properties.Delegates
 
 class GameActivity : AppCompatActivity() {
 
@@ -89,6 +91,8 @@ class GameActivity : AppCompatActivity() {
     private lateinit var d9_bt: TextView
 
     private lateinit var back_bt: ImageView
+    private lateinit var check_bt: TextView
+    private var x: Int = 1
     override fun onCreate(savedInstanceState: Bundle?) {
 
         wordList = BufferedReader(
@@ -156,175 +160,43 @@ class GameActivity : AppCompatActivity() {
         keepPassingFocus()
 
         fun setTextFields(str: String) {
-            if (edit11.text.any { it.isLetter() }) {
-                if (edit12.text.any{it.isLetter()}){
-                    if (edit13.text.any{it.isLetter()}){
-                        if (edit14.text.any{it.isLetter()}){
-                            if(edit15.text.any{it.isLetter()}){
-                                if(edit21.text.any{it.isLetter()}){
-                                    if(edit22.text.any{it.isLetter()}){
-                                        if(edit23.text.any{it.isLetter()}){
-                                            if(edit24.text.any{it.isLetter()}){
-                                                if(edit25.text.any{it.isLetter()}){
-                                                    if(edit31.text.any{it.isLetter()}){
-                                                        if(edit32.text.any{it.isLetter()}){
-                                                            if(edit33.text.any{it.isLetter()}){
-                                                                if(edit34.text.any{it.isLetter()}){
-                                                                    if(edit35.text.any{it.isLetter()}){
-                                                                        if(edit41.text.any{it.isLetter()}){
-                                                                            if(edit42.text.any{it.isLetter()}){
-                                                                                if(edit43.text.any{it.isLetter()}){
-                                                                                    if(edit44.text.any{it.isLetter()}){
-                                                                                        if(edit45.text.any{it.isLetter()}){
-                                                                                            if(edit51.text.any{it.isLetter()}){
-                                                                                                if(edit52.text.any{it.isLetter()}){
-                                                                                                    if(edit53.text.any{it.isLetter()}){
-                                                                                                        if(edit54.text.any{it.isLetter()}){
-                                                                                                            if(edit55.text.any{it.isLetter()}){
-                                                                                                                if(edit61.text.any{it.isLetter()}){
-                                                                                                                    if(edit62.text.any{it.isLetter()}){
-                                                                                                                        if(edit63.text.any{it.isLetter()}){
-                                                                                                                            if(edit64.text.any{it.isLetter()}){
-                                                                                                                                if(edit65.text.any{it.isLetter()}){
-                                                                                                                                }else{edit65.append(str)}
-                                                                                                                            }else{edit64.append(str)}
-                                                                                                                        }else{edit63.append(str)}
-                                                                                                                    }else{edit62.append(str)}
-                                                                                                                }else{edit61.append(str)}
-                                                                                                            }else{edit55.append(str)}
-                                                                                                        }else{edit54.append(str)}
-                                                                                                    }else{edit53.append(str)}
-                                                                                                }else{edit52.append(str)}
-                                                                                            }else{edit51.append(str)}
-                                                                                        }else{edit45.append(str)}
-                                                                                    }else{edit44.append(str)}
-                                                                                }else{edit43.append(str)}
-                                                                            }else{edit42.append(str)}
-                                                                        }else{edit41.append(str)}
-                                                                    }else{edit35.append(str)}
-                                                                }else{edit34.append(str)}
-                                                            }else{edit33.append(str)}
-                                                        }else{edit32.append(str)}
-                                                    }else{edit31.append(str)}
-                                                }else{edit25.append(str)}
-                                            }else{edit24.append(str)}
-                                        }else{edit23.append(str)}
-                                    }else{edit22.append(str)}
-                                }else{edit21.append(str)}
-                            }else{edit15.append(str)}
-                        }else{edit14.append(str)}
-                    }else{edit13.append(str)}
-                }else{edit12.append(str)}
-            }else{edit11.append(str)}
+            val editTexts = listOf(
+                edit11, edit12, edit13, edit14, edit15,
+                edit21, edit22, edit23, edit24, edit25,
+                edit31, edit32, edit33, edit34, edit35,
+                edit41, edit42, edit43, edit44, edit45,
+                edit51, edit52, edit53, edit54, edit55,
+                edit61, edit62, edit63, edit64, edit65
+            )
+
+            for (editText in editTexts) {
+                if (!editText.text.any { it.isLetter() }) {
+                    editText.append(str)
+                    return
+                }
+            }
         }
-        fun delTextFields(){
-            if(edit64.text.any { it.isLetter() }){
-                edit64.text = ""
-            }else{
-                if (edit63.text.any { it.isLetter() }){
-                    edit63.text = ""
-                }else{
-                    if(edit62.text.any { it.isLetter() }){
-                        edit62.text = ""
-                    }else{
-                        if(edit61.text.any { it.isLetter() }){
-                            edit61.text = ""
-                            return
-                        }
-                    }
-                }
-            }
-            if (edit55.text == ""){
-                if(edit54.text.any { it.isLetter() }){
-                    edit54.text = ""
-                }else{
-                    if (edit53.text.any { it.isLetter() }){
-                        edit53.text = ""
-                    }else{
-                        if(edit52.text.any { it.isLetter() }){
-                            edit52.text = ""
-                        }else{
-                            if(edit51.text.any { it.isLetter() }){
-                                edit51.text = ""
-                                return
-                            }
-                        }
-                    }
-                }
-            }
-            if (edit45.text == ""){
-                if(edit44.text.any { it.isLetter() }){
-                    edit44.text = ""
-                }else{
-                    if (edit43.text.any { it.isLetter() }){
-                        edit43.text = ""
-                    }else{
-                        if(edit42.text.any { it.isLetter() }){
-                            edit42.text = ""
-                        }else{
-                            if(edit41.text.any { it.isLetter() }){
-                                edit41.text = ""
-                                return
-                            }
-                        }
-                    }
-                }
-            }
-            if (edit35.text == ""){
-                if(edit34.text.any { it.isLetter() }){
-                    edit34.text = ""
-                }else{
-                    if (edit33.text.any { it.isLetter() }){
-                        edit33.text = ""
-                    }else{
-                        if(edit32.text.any { it.isLetter() }){
-                            edit32.text = ""
-                        }else{
-                            if(edit31.text.any { it.isLetter() }){
-                                edit31.text = ""
-                                return
-                            }
-                        }
-                    }
-                }
-            }
-            if (edit25.text == ""){
-                if(edit24.text.any { it.isLetter() }){
-                    edit24.text = ""
-                }else{
-                    if (edit23.text.any { it.isLetter() }){
-                        edit23.text = ""
-                    }else{
-                        if(edit22.text.any { it.isLetter() }){
-                            edit22.text = ""
-                        }else{
-                            if(edit21.text.any { it.isLetter() }){
-                                edit21.text = ""
-                                return
-                            }
-                        }
-                    }
-                }
-            }
-            if (edit15.text == ""){
-                if(edit14.text.any { it.isLetter() }){
-                    edit14.text = ""
-                }else{
-                    if (edit13.text.any { it.isLetter() }){
-                        edit13.text = ""
-                    }else{
-                        if(edit12.text.any { it.isLetter() }){
-                            edit12.text = ""
-                        }else{
-                            if(edit11.text.any { it.isLetter() }){
-                                edit11.text = ""
-                                return
-                            }
-                        }
+
+        fun delTextFields() {
+            val editGroups = listOf(
+                listOf(edit64, edit63, edit62, edit61),
+                listOf(edit54, edit53, edit52, edit51),
+                listOf(edit44, edit43, edit42, edit41),
+                listOf(edit34, edit33, edit32, edit31),
+                listOf(edit24, edit23, edit22, edit21),
+                listOf(edit14, edit13, edit12, edit11)
+            )
+
+            for (group in editGroups) {
+                for (editText in group) {
+                    if (editText.text.any { it.isLetter() }) {
+                        editText.text = ""
+                        return
                     }
                 }
             }
         }
+
         a1_bt = findViewById(R.id.a1_bt)
         a1_bt.setOnClickListener {
             setTextFields("Й")
@@ -574,75 +446,34 @@ class GameActivity : AppCompatActivity() {
         })
     }
 
+
     private fun makeGameInactive() {
-        edit11.isEnabled = false
-        edit12.isEnabled = false
-        edit13.isEnabled = false
-        edit14.isEnabled = false
-        edit15.isEnabled = false
-        edit21.isEnabled = false
-        edit22.isEnabled = false
-        edit23.isEnabled = false
-        edit24.isEnabled = false
-        edit25.isEnabled = false
-        edit31.isEnabled = false
-        edit32.isEnabled = false
-        edit33.isEnabled = false
-        edit34.isEnabled = false
-        edit35.isEnabled = false
-        edit41.isEnabled = false
-        edit42.isEnabled = false
-        edit43.isEnabled = false
-        edit44.isEnabled = false
-        edit45.isEnabled = false
-        edit51.isEnabled = false
-        edit52.isEnabled = false
-        edit53.isEnabled = false
-        edit54.isEnabled = false
-        edit55.isEnabled = false
-        edit61.isEnabled = false
-        edit62.isEnabled = false
-        edit63.isEnabled = false
-        edit64.isEnabled = false
-        edit65.isEnabled = false
+        val editTexts = listOf(
+            edit11, edit12, edit13, edit14, edit15,
+            edit21, edit22, edit23, edit24, edit25,
+            edit31, edit32, edit33, edit34, edit35,
+            edit41, edit42, edit43, edit44, edit45,
+            edit51, edit52, edit53, edit54, edit55,
+            edit61, edit62, edit63, edit64, edit65
+        )
+
+        editTexts.forEach { it.isEnabled = false }
     }
 
+
     private fun keepPassingFocus() {
-        passFocusToNextEdt(edit11, edit12)
-        passFocusToNextEdt(edit12, edit13)
-        passFocusToNextEdt(edit13, edit14)
-        passFocusToNextEdt(edit14, edit15)
-        passFocusToNextEdt(edit15, edit21)
+        val editTexts = listOf(
+            edit11, edit12, edit13, edit14, edit15,
+            edit21, edit22, edit23, edit24, edit25,
+            edit31, edit32, edit33, edit34, edit35,
+            edit41, edit42, edit43, edit44, edit45,
+            edit51, edit52, edit53, edit54, edit55,
+            edit61, edit62, edit63, edit64, edit65
+        )
 
-        passFocusToNextEdt(edit21, edit22)
-        passFocusToNextEdt(edit22, edit23)
-        passFocusToNextEdt(edit23, edit24)
-        passFocusToNextEdt(edit24, edit25)
-        passFocusToNextEdt(edit25, edit31)
-
-        passFocusToNextEdt(edit31, edit32)
-        passFocusToNextEdt(edit32, edit33)
-        passFocusToNextEdt(edit33, edit34)
-        passFocusToNextEdt(edit34, edit35)
-        passFocusToNextEdt(edit35, edit41)
-
-        passFocusToNextEdt(edit41, edit42)
-        passFocusToNextEdt(edit42, edit43)
-        passFocusToNextEdt(edit43, edit44)
-        passFocusToNextEdt(edit44, edit45)
-        passFocusToNextEdt(edit45, edit51)
-
-        passFocusToNextEdt(edit51, edit52)
-        passFocusToNextEdt(edit52, edit53)
-        passFocusToNextEdt(edit53, edit54)
-        passFocusToNextEdt(edit54, edit55)
-        passFocusToNextEdt(edit55, edit61)
-
-        passFocusToNextEdt(edit61, edit62)
-        passFocusToNextEdt(edit62, edit63)
-        passFocusToNextEdt(edit63, edit64)
-        passFocusToNextEdt(edit64, edit65)
-
+        for (i in 0 until editTexts.size - 1) {
+            passFocusToNextEdt(editTexts[i], editTexts[i + 1])
+        }
     }
 
     private fun passFocusToNextEdt(edit1: TextView, edit2: TextView) {
@@ -665,94 +496,38 @@ class GameActivity : AppCompatActivity() {
 
     @SuppressLint("DiscouragedApi")
     private fun validateRow(
-        edit1: TextView,
-        edit2: TextView,
-        edit3: TextView,
-        edit4: TextView,
-        edit5: TextView
+        vararg edits: TextView
     ) {
+        val editTexts = edits.map { it.text.toString() }
+        val wordLetters = word.map { it.toString() }
 
-        val edit1Txt = edit1.text.toString()
-        val edit2Txt = edit2.text.toString()
-        val edit3Txt = edit3.text.toString()
-        val edit4Txt = edit4.text.toString()
-        val edit5Txt = edit5.text.toString()
-
-
-        val w1 = word[0].toString()
-        val w2 = word[1].toString()
-        val w3 = word[2].toString()
-        val w4 = word[3].toString()
-        val w5 = word[4].toString()
-
-        if (edit1Txt == w2 || edit1Txt == w3 || edit1Txt == w4 || edit1Txt == w5) {
-            edit1.setBackgroundColor(Color.parseColor("#FF9800"))
-        }
-        if (edit2Txt == w1 || edit2Txt == w3 || edit2Txt == w4 || edit2Txt == w5) {
-            edit2.setBackgroundColor(Color.parseColor("#FF9800"))
-        }
-        if (edit3Txt == w1 || edit3Txt == w2 || edit3Txt == w4 || edit3Txt == w5) {
-            edit3.setBackgroundColor(Color.parseColor("#FF9800"))
-        }
-        if (edit4Txt == w1 || edit4Txt == w2 || edit4Txt == w3 || edit4Txt == w5) {
-            edit4.setBackgroundColor(Color.parseColor("#FF9800"))
-        }
-        if (edit5Txt == w1 || edit5Txt == w2 || edit5Txt == w3 || edit5Txt == w4) {
-            edit5.setBackgroundColor(Color.parseColor("#FF9800"))
+        for (i in editTexts.indices) {
+            when {
+                editTexts[i] == wordLetters[i] -> edits[i].setBackgroundColor(Color.parseColor("#33cc33"))
+                editTexts[i] in wordLetters -> edits[i].setBackgroundColor(Color.parseColor("#FF9800"))
+                else -> edits[i].setBackgroundColor(Color.parseColor("#5C5F61"))
+            }
         }
 
-        if (edit1Txt == w1) {
-            edit1.setBackgroundColor(Color.parseColor("#33cc33"))
-        }
-        if (edit2Txt == w2) {
-            edit2.setBackgroundColor(Color.parseColor("#33cc33"))
-        }
-        if (edit3Txt == w3) {
-            edit3.setBackgroundColor(Color.parseColor("#33cc33"))
-        }
-        if (edit4Txt == w4) {
-            edit4.setBackgroundColor(Color.parseColor("#33cc33"))
-        }
-        if (edit5Txt == w5) {
-            edit5.setBackgroundColor(Color.parseColor("#33cc33"))
-        }
-
-        if (edit1Txt != w1 && edit1Txt != w2 && edit1Txt != w3 && edit1Txt != w4 && edit1Txt != w5) {
-            edit1.setBackgroundColor(Color.parseColor("#5C5F61"))
-        }
-
-        if (edit2Txt != w1 && edit2Txt != w2 && edit2Txt != w3 && edit2Txt != w4 && edit2Txt != w5) {
-            edit2.setBackgroundColor(Color.parseColor("#5C5F61"))
-        }
-
-        if (edit3Txt != w1 && edit3Txt != w2 && edit3Txt != w3 && edit3Txt != w4 && edit3Txt != w5) {
-            edit3.setBackgroundColor(Color.parseColor("#5C5F61"))
-        }
-
-        if (edit4Txt != w1 && edit4Txt != w2 && edit4Txt != w3 && edit4Txt != w4 && edit4Txt != w5) {
-            edit4.setBackgroundColor(Color.parseColor("#5C5F61"))
-        }
-
-        if (edit5Txt != w1 && edit5Txt != w2 && edit5Txt != w3 && edit5Txt != w4 && edit5Txt != w5) {
-            edit5.setBackgroundColor(Color.parseColor("#5C5F61"))
-        }
-
-        if (edit1Txt == w1 && edit2Txt == w2 && edit3Txt == w3 && edit4Txt == w4 && edit5Txt == w5) {
+        if (editTexts.zip(wordLetters).all { it.first == it.second }) {
             makeGameInactive()
-            val intent = Intent(this, WinActivity::class.java)
-            intent.putExtra("win", word)
+            val intent = Intent(this, WinActivity::class.java).apply {
+                putExtra("win", word)
+            }
             startActivity(intent)
             return
         }
 
-        if (edit5.id == R.id.edit_65) {
+        if (edits.last().id == R.id.edit_65) {
             makeGameInactive()
-            val intent = Intent(this, LoseActivity::class.java)
-            intent.putExtra("lose", word)
+            val intent = Intent(this, LoseActivity::class.java).apply {
+                putExtra("lose", word)
+            }
             startActivity(intent)
             return
         }
     }
+
 
     private fun setAppTheme(isDark: Boolean) {
         if (isDark) {
